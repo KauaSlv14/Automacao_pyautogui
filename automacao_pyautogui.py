@@ -57,10 +57,10 @@ for linha in tabela.index:
     pyautogui.press("Tab")
 
     obs=tabela.loc[linha, "obs"]
-    pyautogui.write(str(obs))
+   
+    if obs != "nan":
+        pyautogui.write(str(obs))
     pyautogui.press('Tab')
-    if obs=="non":
-        None
     
     pyautogui.press("Enter")
     pyautogui.scroll(500000)
